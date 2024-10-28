@@ -9,6 +9,7 @@ namespace SantiagoConlago_Examen1P.Models
         public string? SCVideojuego { get; set; }
         public string? SCDescription { get; set; }
         public bool SCGarantia{ get; set; }
-        public decimal SCPrecio { get; set; }
+        public decimal? SCPrecio { get; set; }
+        public DateTime SCDate { get; set; } 
     }
 }

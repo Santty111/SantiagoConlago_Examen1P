@@ -54,7 +54,7 @@ namespace SantiagoConlago_Examen1P.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SantiagoConlago_modelId,SCVideojuego,SCDescription,SCGarantia,SCPrecio")] SantiagoConlago_model santiagoConlago_model)
+        public async Task<IActionResult> Create([Bind("SantiagoConlago_modelId,SCVideojuego,SCDescription,SCGarantia,SCPrecio,SCDate")] SantiagoConlago_model santiagoConlago_model)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace SantiagoConlago_Examen1P.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SantiagoConlago_modelId,SCVideojuego,SCDescription,SCGarantia,SCPrecio")] SantiagoConlago_model santiagoConlago_model)
+        public async Task<IActionResult> Edit(int id, [Bind("SantiagoConlago_modelId,SCVideojuego,SCDescription,SCGarantia,SCPrecio,SCDate")] SantiagoConlago_model santiagoConlago_model)
         {
             if (id != santiagoConlago_model.SantiagoConlago_modelId)
             {

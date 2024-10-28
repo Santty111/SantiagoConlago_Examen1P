@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SantiagoConlago_Examen1P.Data;
 
@@ -11,9 +12,11 @@ using SantiagoConlago_Examen1P.Data;
 namespace SantiagoConlago_Examen1P.Migrations
 {
     [DbContext(typeof(SantiagoConlago_Examen1PContext))]
-    partial class SantiagoConlago_Examen1PContextModelSnapshot : ModelSnapshot
+    [Migration("20241028154316_SCtablita2")]
+    partial class SCtablita2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,17 +33,17 @@ namespace SantiagoConlago_Examen1P.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SantiagoConlago_modelId"));
 
-                    b.Property<DateTime>("SCDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("SCDescription")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("SCGarantia")
+                    b.Property<bool?>("SCGarantia")
                         .HasColumnType("bit");
 
                     b.Property<decimal?>("SCPrecio")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("SCPrecioDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("SCVideojuego")
                         .IsRequired()
