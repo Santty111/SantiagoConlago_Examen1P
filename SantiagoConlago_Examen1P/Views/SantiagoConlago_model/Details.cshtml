@@ -1,0 +1,42 @@
+﻿@model SantiagoConlago_Examen1P.Models.SantiagoConlago_model
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SantiagoConlago_model</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SCVideojuego)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SCVideojuego)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SCDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SCDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SCGarantia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SCGarantia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SCPrecio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SCPrecio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.SantiagoConlago_modelId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,49 @@
+﻿@model SantiagoConlago_Examen1P.Models.SantiagoConlago_model
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>SantiagoConlago_model</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SantiagoConlago_modelId" />
+            <div class="form-group">
+                <label asp-for="SCVideojuego" class="control-label"></label>
+                <input asp-for="SCVideojuego" class="form-control" />
+                <span asp-validation-for="SCVideojuego" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SCDescription" class="control-label"></label>
+                <input asp-for="SCDescription" class="form-control" />
+                <span asp-validation-for="SCDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="SCGarantia" /> @Html.DisplayNameFor(model => model.SCGarantia)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="SCPrecio" class="control-label"></label>
+                <input asp-for="SCPrecio" class="form-control" />
+                <span asp-validation-for="SCPrecio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

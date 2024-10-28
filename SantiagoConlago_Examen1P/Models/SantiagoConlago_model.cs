@@ -4,10 +4,11 @@ namespace SantiagoConlago_Examen1P.Models
 {
     public class SantiagoConlago_model
     {
-        public int videojuegoId { get; set; }
+        public int SantiagoConlago_modelId { get; set; }
         [Required]
-        public string? Name { get; set; }
-        public string? Description { get; set; }
-        public bool Enabled { get; set; }
+        public string? SCVideojuego { get; set; }
+        public string? SCDescription { get; set; }
+        public bool SCGarantia{ get; set; }
+        public decimal SCPrecio { get; set; }
     }
 }

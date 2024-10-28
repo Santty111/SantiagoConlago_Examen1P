@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SantiagoConlago_Examen1P.Models.SantiagoConlago_model>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>SCTablita</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SCVideojuego)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SCDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SCGarantia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SCPrecio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCVideojuego)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCGarantia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCPrecio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SantiagoConlago_modelId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SantiagoConlago_modelId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SantiagoConlago_modelId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
